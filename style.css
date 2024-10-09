@@ -1,0 +1,117 @@
+@import url(variables.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-chubby/css/uicons-regular-chubby.css');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 30px;
+}
+
+.bottomsHeader{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-font);
+    padding: 20px;
+    font-family: var(--font-family), bold;
+}
+
+button{
+    font-family: var(--font-bottom);
+    border-radius: 40px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.bannerSection{
+    background-color: #869ECA;
+    height: 100%;
+    margin: 50px;
+    padding: 100px 100px 100px 50px;
+    border-radius: 1rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; /* Adjust the gap between items */
+    height: 100%;
+    max-width: 650px;
+    margin: 0 0 0 50px;
+}
+
+.item {
+    background-color: #f0f0f0; /* Placeholder background color */
+    text-align: center;
+}
+
+.text-container {
+    grid-column: span 2; /* Make the button span across both columns */
+    text-align: center;
+}
+
+.image-container {
+    height: 50px;
+    width: 50px;
+    animation: placeholder ease-in-out 2s infinite;
+}
+
+.image-container img {
+    width: 100%;
+}
+
+.loro-button {
+    padding: 10px 20px;
+    background-color: #007BFF; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.loro-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+
+@keyframes placeholder {
+    0% {
+        background-color: var(--placeholder-primary);
+    }
+    50% {
+        background-color: var(--placeholder-secondary);
+    }
+    100% {
+        background-color: var(--placeholder-primary);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+.item.loaded .image-container {
+    animation: none;
+}
+.item.loaded .image-container img{
+    animation: fadeIn linear .5s;
+}
